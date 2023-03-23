@@ -6,5 +6,6 @@
   "abilities": "Oblivious",
   "gender": "",
   "type": "Water + Psychic",
-  "weaknesses": "Ghost + Dark + Grass + Electric + Bug"
+  "weaknesses": "Ghost + Dark + Grass + Electric + Bug",
+  "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/080.png"
 }
