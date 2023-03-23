@@ -8,5 +8,12 @@
   "type": "Water + Psychic",
   "weaknesses": "Ghost + Dark + Grass + Electric + Bug",
   "pokedexnr": "80",
-  "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/080.png"
+  "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/080.png",
+  "psychic-symbol": "https://pm1.narvii.com/6369/f14d12472d3cddf98ec656ba88c9aed343459b59_hq.jpg",
+  "water-symbol": "https://www.clipartmax.com/png/small/26-261578_pokemon-water-type-symbol.png",
+  "grass-symbol": "https://th.bing.com/th/id/OIP.WJd7EFSossd2jagjba8k6AHaG4?pid=ImgDet&rs=1",
+  "electric-symbol": "https://th.bing.com/th/id/R.4fe90d2ec4bf5618a7584b8f21f65d1c?rik=f3W5cPk2YHwI7w&pid=ImgRaw&r=0",
+  "bug-symbol": "https://www.jetpunk.com/img/user-photo-library/ce/cec3e3da4e-450.png",
+  "dark-symbol": "https://i.imgur.com/qW6pDAx.png",
+  "ghost-symbol": "https://static0.thegamerimages.com/wordpress/wp-content/uploads/2021/07/180px-Pok%C3%A9mon_Ghost_Type_Iconsvg.png"
 }
