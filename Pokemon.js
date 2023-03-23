@@ -22,14 +22,14 @@ async function getPokemon(url) {
 }
 
 function showPokemon(pokemon) {
-  document.querySelector("body").insertAdjacentHTML(
+  document.querySelector("#pokemons").insertAdjacentHTML(
     "beforeend",
     `
     <article>
     <img src="${pokemon.image}" alt""/>
-    <h1>${pokemon.name}</h1>
-    <h2>${pokemon.category}</h2>
-    <p>Type: ${pokemon.type}</p>
+    <h2>${pokemon.name}</h2>
+    <h3>${pokemon.category}</h3>
+    <h4>Type: ${pokemon.type}</h4>
     <p>Weaknesses: ${pokemon.weaknesses}</p>
     </article>
     `
@@ -56,7 +56,8 @@ function showPokemon(pokemon) {
       "Weight: " + pokemon.weight;
     document.querySelector("#dialog-pokedexnr").textContent =
       "Pokedex Number: " + pokemon.pokedexnr;
+    document.querySelector("#dialog-image").src = pokemon.image;
 
-    document.querySelector("#characterDialog").showModal();
+    document.querySelector("#pokemonDialog").showModal();
   }
 }

@@ -76,12 +76,47 @@ main {
   animation: fadeIn 0.4s;
   padding: 137px 0 0;
 }
+
+/* ---------- animations ---------- */
+/* fade in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 /* ---------- grid container styling ---------- */
 .grid-container {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1em;
   padding: 1em;
+}
+
+@media (min-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 992px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (min-width: 1200px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+@media (min-width: 1500px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
 }
 
 /* ---------- grid item styling ---------- */
@@ -121,6 +156,42 @@ main {
 .grid-container .btns button {
   width: 100%;
 }
+
+/* ---------- form styling ---------- */
+/* input form styling */
+form {
+  margin: 2em auto 0;
+  background-color: var(--light-green);
+  padding: 1em 1em 2em;
+  text-align: center;
+}
+
+button {
+  font-weight: 300;
+  font-size: 1em;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  border-radius: 0;
+  color: var(--text-color-light);
+  background-color: var(--green);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.5em 1em;
+  width: 100%;
+  max-width: 380px;
+}
+
+input {
+  margin: 1em auto;
+  width: 100%;
+  max-width: 350px;
+  padding: 1em;
+  border: 2px solid var(--green);
+  display: block;
+  background: var(--white);
+}
+
 /* ---------- dialog styling ---------- */
 
 dialog {
