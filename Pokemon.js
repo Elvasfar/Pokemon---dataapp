@@ -5,7 +5,7 @@ window.addEventListener("load", start);
 async function start() {
   console.log("start kører");
   const SlowBro = await getPokemon(
-    "https://raw.githubusercontent.com/Elvasfar/Pokemon---dataapp/main/Slowbro.json"
+    "https://github.com/Elvasfar/Pokemon---dataapp/blob/main/Slowbro.json"
   );
   console.log(SlowBro);
 
