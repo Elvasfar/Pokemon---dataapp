@@ -9,14 +9,37 @@
   </head>
   <body>
     <article>
-      <h1></h1>
-      <h2></h2>
-      <h3></h3>
-      <p></p>
-      <p></p>
-      <p></p>
-      <p></p>
+      <dialog id="pokemonDialog">
+        <form method="dialog">
+          <button>Close</button>
+        </form>
+        <h2 id="dialog-header"></h2>
+        <h3 id="dialog-second-header"></h3>
+        <p id="dialog-type"></p>
+        <p id="dialog-weaknesses"></p>
+        <p id="dialog-abilities"></p>
+        <p id="dialog-height"></p>
+        <p id="dialog-weight"></p>
+        <p id="dialog-pokedexnr"></p>
+
+        <img
+          id="dialog-image"
+          src="https://images5.fanpop.com/image/photos/30900000/hogwarts-harry-potter-30982898-1024-768.jpg"
+        />
+      </dialog>
     </article>
+
+    <header>
+      <h1>PokeDex by Dat23v2</h1>
+    </header>
+    <main>
+      <section id="pokemons" class="grid-container"></section>
+    </main>
+
+    <footer>
+      <p>Input by MACA</p>
+    </footer>
+
     <script src="Pokemon.js"></script>
   </body>
 </html>

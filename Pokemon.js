@@ -34,4 +34,29 @@ function showPokemon(pokemon) {
     </article>
     `
   );
+  document
+    .querySelector("#pokemons article:last-child")
+    .addEventListener("click", pokemonClicked);
+
+  function pokemonClicked() {
+    console.log(pokemon);
+
+    document.querySelector("#dialog-header").textContent = pokemon.name;
+    document.querySelector("#dialog-second-header").textContent =
+      "Category: " + pokemon.category;
+    document.querySelector("#dialog-type").textContent =
+      "Type: " + pokemon.type;
+    document.querySelector("#dialog-weaknesses").textContent =
+      "Weaknesses: " + pokemon.weaknesses;
+    document.querySelector("#dialog-abilities").textContent =
+      "Abilities: " + pokemon.abilities;
+    document.querySelector("#dialog-height").textContent =
+      "Height: " + pokemon.height;
+    document.querySelector("#dialog-weight").textContent =
+      "Weight: " + pokemon.weight;
+    document.querySelector("#dialog-pokedexnr").textContent =
+      "Pokedex Number: " + pokemon.pokedexnr;
+
+    document.querySelector("#characterDialog").showModal();
+  }
 }
