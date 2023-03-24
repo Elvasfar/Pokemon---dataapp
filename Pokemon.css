@@ -189,16 +189,6 @@ button {
   max-width: 380px;
 }
 
-input {
-  margin: 1em auto;
-  width: 100%;
-  max-width: 350px;
-  padding: 1em;
-  border: 2px solid var(--green);
-  display: block;
-  background: var(--white);
-}
-
 /* ---------- dialog styling ---------- */
 
 dialog {
