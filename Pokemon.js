@@ -5,7 +5,7 @@ window.addEventListener("load", start);
 async function start() {
   console.log("start kører");
   const SlowBro = await getPokemon(
-    "https://github.com/Elvasfar/Pokemon---dataapp/blob/main/Slowbro.json"
+    "https://raw.githubusercontent.com/Elvasfar/Pokemon---dataapp/main/Slowbro.json"
   );
   console.log(SlowBro);
 
@@ -25,11 +25,11 @@ function showPokemon(pokemon) {
   document.querySelector("#pokemons").insertAdjacentHTML(
     "beforeend",
     `
-    <article>
+    <article class="grid-item">
     <img src="${pokemon.image}" alt""/>
     <h2>${pokemon.name}</h2>
-    <h3>${pokemon.category}</h3>
-    <h4>Type: ${pokemon.type}</h4>
+    <h3>Category: ${pokemon.category}</h3>
+    <p>Type: ${pokemon.type}</p>
     <p>Weaknesses: ${pokemon.weaknesses}</p>
     </article>
     `
