@@ -134,7 +134,7 @@ main {
   transition: 0.5s;
   animation: fadeIn 0.5s;
   cursor: pointer;
-border-color: var(--green)royalblue;
+
 
 }
 .grid-item:hover {
@@ -241,4 +241,10 @@ dialog p {
   width: 200px;
   height: 200px;
   align-content: center;
+}
+
+#typeimages{
+
+    height: 30px;
+    width: 30px;
 }
