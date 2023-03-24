@@ -30,7 +30,7 @@ function showPokemon(pokemon) {
     <h2>${pokemon.name}</h2>
     <h3>Category: ${pokemon.category}</h3>
     <p>Type: <img id="typeimages" src="images/water.png" alt""/>   <img id="typeimages" src="images/psychic.png" alt""/></p> 
-    <p>Weaknesses: <img id="typeimages" src="images/bug.png" alt""/> <img id="typeimages" src="images/grass.png" alt""/> <img id="typeimages" src="images/dark.png" alt""/> <img id="typeimages" src="images/electric.png" alt""/> <img id="typeimages" src="images/ghost.png" alt""/></p>
+    <p>Weaknesses: <img id="typeimages" src="images/ghost.png" alt""/> <img id="typeimages" src="images/dark.png" alt""/> <img id="typeimages" src="images/grass.png" alt""/> <img id="typeimages" src="images/electric.png" alt""/> <img id="typeimages" src="images/bug.png" alt""/></p>
     </article>
     `
   );
