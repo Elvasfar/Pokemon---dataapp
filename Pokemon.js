@@ -40,11 +40,7 @@ function showPokemon(pokemon) {
     "beforeend",
     `
     <article class="grid-item">
-    <img src="${pokemon.image}" alt""/>
-    <h2>${pokemon.name}</h2>
-    <h3>Category: ${pokemon.category}</h3>
-    <p>Type: ${pokemon.type}</p> 
-    <p>Weaknesses: ${pokemon.weaknesses}</p>
+         &emsp;&emsp;${pokemon.name}&emsp;&emsp; ${pokemon.category} &emsp;&emsp; <img src="${pokemon.image}" alt""/> &emsp;&emsp; ${pokemon.type} &emsp;&emsp; ${pokemon.weaknesses}
     </article>
     `
   );

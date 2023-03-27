@@ -54,7 +54,7 @@ img {
 
 /* ---------- header styling ---------- */
 header {
-  background-color: var(--green);
+  background-color: rgba(12, 11, 11, 0.925);
   color: var(--text-color-light);
   padding: 1em;
   position: fixed;
@@ -62,12 +62,14 @@ header {
   left: 0;
   right: 0;
   z-index: 9999;
+  background-image: url(images/header.png);
+  background-repeat: no-repeat;
 }
 
 /* ---------- footer styling ---------- */
 
 footer {
-  background-color: var(--green);
+  background-color: rgba(12, 11, 11, 0.925);
   color: var(--text-color-light);
   padding: 1em;
   text-align: center;
@@ -75,9 +77,9 @@ footer {
 
 /* ---------- main page styling ---------- */
 main {
-  background: var(--light-green);
   animation: fadeIn 0.4s;
   padding: 137px 0 0;
+  background-image: url(images/background.jpg);
 }
 
 /* ---------- animations ---------- */
@@ -95,62 +97,51 @@ main {
 /* ---------- grid container styling ---------- */
 .grid-container {
   display: grid;
-  grid-template-rows: max-content;
-  gap: 1em;
-  padding: 1em;
-  background-color: rgb(230, 75, 36);
+  gap: 0;
+  padding: 4em;
+  padding-top: 0;
+  grid-template-columns: 1fr;
 }
-
-@media (min-width: 600px) {
-  .grid-container {
-    grid-template-columns: 1fr 1fr;
-  }
+article {
+  display: inline;
 }
-
-@media (min-width: 900px) {
-  .grid-container {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (min-width: 1200px) {
-  .grid-container {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-@media (min-width: 1500px) {
-  .grid-container {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
 /* ---------- grid item styling ---------- */
 
 .grid-item {
   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
-  padding: 1.8em;
+  padding: 0;
   background-color: var(--white);
   transition: 0.5s;
   animation: fadeIn 0.5s;
   cursor: pointer;
-  max-width: 400px;
+  max-width: 1400px;
   object-fit: scale-down;
+  gap: 0;
+  height: min-content;
 }
+#categories {
+  padding-left: 4em;
+}
+
 .grid-item:hover {
   box-shadow: 0 8px 16px 0 var(--green);
 }
 
 .grid-item img {
   width: fit-content;
-  max-width: 380px;
-  height: 400px;
+  max-width: 30px;
+  height: 30px;
   object-fit: contain;
 }
 
 .grid-item p {
   margin: 0.4em 0;
+  display: inline-block;
 }
 
+.grid-item article {
+  display: inline;
+}
 /* ---------- buttons in grid container ---------- */
 
 .grid-container .btns {
