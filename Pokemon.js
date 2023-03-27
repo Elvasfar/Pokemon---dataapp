@@ -4,12 +4,19 @@ window.addEventListener("load", start);
 
 async function start() {
   console.log("start kører");
+
+  const porygon = await getPokemon(
+    "https://raw.githubusercontent.com/JaDetGodtDu/Pokemon-Data-App/main/data/porygon.json"
+  );
+
   const SlowBro = await getPokemon(
     "https://raw.githubusercontent.com/Elvasfar/Pokemon---dataapp/main/Slowbro.json"
   );
-  console.log(SlowBro);
 
-  showPokemon(SlowBro);
+  console.log(SlowBro);
+  console.log(porygon);
+
+  showPokemon(SlowBro, porygon);
 }
 
 async function getPokemon(url) {
@@ -22,6 +29,8 @@ async function getPokemon(url) {
 }
 
 function showPokemon(pokemon) {
+  /* --- Hvis type og weaknesses skal vises som symboler ----
+  
   document.querySelector("#pokemons").insertAdjacentHTML(
     "beforeend",
     `
@@ -31,6 +40,18 @@ function showPokemon(pokemon) {
     <h3>Category: ${pokemon.category}</h3>
     <p>Type: <img id="typeimages" src="images/water.png" alt""/>   <img id="typeimages" src="images/psychic.png" alt""/></p> 
     <p>Weaknesses: <img id="typeimages" src="images/ghost.png" alt""/> <img id="typeimages" src="images/dark.png" alt""/> <img id="typeimages" src="images/grass.png" alt""/> <img id="typeimages" src="images/electric.png" alt""/> <img id="typeimages" src="images/bug.png" alt""/></p>
+    </article>
+    );
+    `*/
+  document.querySelector("#pokemons").insertAdjacentHTML(
+    "beforeend",
+    `
+    <article class="grid-item">
+    <img src="${pokemon.image}" alt""/>
+    <h2>${pokemon.name}</h2>
+    <h3>Category: ${pokemon.category}</h3>
+    <p>Type: ${pokemon.type}</p> 
+    <p>Weaknesses: ${pokemon.weaknesses}</p>
     </article>
     `
   );
