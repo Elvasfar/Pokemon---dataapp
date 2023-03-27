@@ -7,14 +7,13 @@
   --text-color-dark: #2b5bf8;
   --white: #f2f2f2;
   --font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-
 }
 
 /* ---------- general styling ---------- */
 html {
   color: var(--text-color-dark);
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  --text-color:var(--light-grey)
+  --text-color: var(--light-grey);
   height: 100%;
   width: 100%;
 }
@@ -29,15 +28,13 @@ h1 {
   font-weight: 500;
   letter-spacing: 0.1px;
   text-align: center;
-    --text-color:var(--light-grey)
-
+  --text-color: var(--light-grey);
 }
 
 h2 {
   font-weight: 500;
   letter-spacing: 0.1px;
-    --text-color:var(--light-grey)
-
+  --text-color: var(--light-grey);
 }
 
 h3 {
@@ -98,9 +95,10 @@ main {
 /* ---------- grid container styling ---------- */
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-rows: max-content;
   gap: 1em;
   padding: 1em;
+  background-color: rgb(230, 75, 36);
 }
 
 @media (min-width: 600px) {
@@ -109,19 +107,20 @@ main {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 900px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1200px) {
   .grid-container {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
-@media (min-width: 1200px) {
-  .grid-container {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-}
 @media (min-width: 1500px) {
   .grid-container {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
@@ -129,22 +128,23 @@ main {
 
 .grid-item {
   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
-    padding: 1.8em;
+  padding: 1.8em;
   background-color: var(--white);
   transition: 0.5s;
   animation: fadeIn 0.5s;
   cursor: pointer;
-
-
+  max-width: 400px;
+  object-fit: scale-down;
 }
 .grid-item:hover {
   box-shadow: 0 8px 16px 0 var(--green);
 }
 
 .grid-item img {
-  width: auto;
+  width: fit-content;
+  max-width: 380px;
   height: 400px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .grid-item p {
@@ -192,16 +192,15 @@ button {
 /* ---------- dialog styling ---------- */
 
 dialog {
-border-color: var(--green)royalblue;
-border-top-color: var(--green)royalblue;
-border-bottom-color: var(--green)royalblue;
+  border-color: var(--green) royalblue;
+  border-top-color: var(--green) royalblue;
+  border-bottom-color: var(--green) royalblue;
   background-color: var(--light-green);
   width: 65vw;
   height: 650px;
   padding: 3em 1em;
   align-content: center;
   text-align: center;
-
 }
 
 dialog::backdrop {
@@ -233,8 +232,7 @@ dialog p {
   align-content: center;
 }
 
-#typeimages{
-
-    height: 30px;
-    width: 30px;
+#typeimages {
+  height: 30px;
+  width: 30px;
 }

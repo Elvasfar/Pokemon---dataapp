@@ -5,18 +5,11 @@ window.addEventListener("load", start);
 async function start() {
   console.log("start kører");
 
-  const porygon = await getPokemon(
-    "https://raw.githubusercontent.com/JaDetGodtDu/Pokemon-Data-App/main/data/porygon.json"
+  const pokemons = await getPokemon(
+    "https://cederdorff.github.io/dat-js/05-data/pokemons.json"
   );
 
-  const SlowBro = await getPokemon(
-    "https://raw.githubusercontent.com/Elvasfar/Pokemon---dataapp/main/Slowbro.json"
-  );
-
-  console.log(SlowBro);
-  console.log(porygon);
-
-  showPokemon(SlowBro, porygon);
+  pokemons.forEach(showPokemon);
 }
 
 async function getPokemon(url) {
