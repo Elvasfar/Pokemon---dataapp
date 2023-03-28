@@ -42,8 +42,8 @@ function showPokemon(pokemon) {
     <article class="grid-item">
     <img src="${pokemon.image}" alt""/>
     <h2>${pokemon.name}</h2>
-    <h3>Category: ${pokemon.category}</h3>
-    <p>Type: ${pokemon.type}</p> 
+    <h3>Type: ${pokemon.type}</h3>
+    <p>Ability: ${pokemon.ability}</p> 
     <p>Weaknesses: ${pokemon.weaknesses}</p>
     </article>
     `
@@ -55,21 +55,45 @@ function showPokemon(pokemon) {
   function pokemonClicked() {
     console.log(pokemon);
 
-    document.querySelector("#dialog-header").textContent = pokemon.name;
-    document.querySelector("#dialog-second-header").textContent =
-      "Category: " + pokemon.category;
+    document.querySelector("#dialog-name").textContent = pokemon.name;
     document.querySelector("#dialog-type").textContent =
       "Type: " + pokemon.type;
+    document.querySelector("#dialog-subtype").textContent =
+      "Subtype: " + pokemon.subtype;
+    document.querySelector("#dialog-footprint").textContent =
+      "Footprint: " + pokemon.footprint;
+    document.querySelector("#dialog-description").textContent =
+      "Description: " + pokemon.description;
     document.querySelector("#dialog-weaknesses").textContent =
       "Weaknesses: " + pokemon.weaknesses;
-    document.querySelector("#dialog-abilities").textContent =
-      "Abilities: " + pokemon.abilities;
+    document.querySelector("#dialog-ability").textContent =
+      "Abilities: " + pokemon.ability;
     document.querySelector("#dialog-height").textContent =
       "Height: " + pokemon.height;
     document.querySelector("#dialog-weight").textContent =
       "Weight: " + pokemon.weight;
-    document.querySelector("#dialog-pokedexnr").textContent =
-      "Pokedex Number: " + pokemon.pokedexnr;
+    document.querySelector("#dialog-dexindex").textContent =
+      "Dexindex: " + pokemon.dexindex;
+    document.querySelector("#dialog-generation").textContent =
+      "Generation: " + pokemon.generation;
+    document.querySelector("#dialog-spilversion").textContent =
+      "Spilversion: " + pokemon.spilversion;
+    document.querySelector("#dialog-gender").textContent =
+      "Gender: " + pokemon.gender;
+    document.querySelector("#dialog-canEvolve").textContent =
+      "Evolvement: " + pokemon.canEvolve;
+    document.querySelector("#dialog-statsHP").textContent =
+      "Health Points: " + pokemon.statsHP;
+    document.querySelector("#dialog-statsAttack").textContent =
+      "Attack: " + pokemon.statsAttack;
+    document.querySelector("#dialog-statsDefence").textContent =
+      "Defence: " + pokemon.statsDefence;
+    document.querySelector("#dialog-statsSpecialAttack").textContent =
+      "Special Attack: " + pokemon.statsSpecialAttack;
+    document.querySelector("#dialog-statsSpecialDefence").textContent =
+      "Special Defence: " + pokemon.statsSpecialDefence;
+    document.querySelector("#dialog-statsSpeed").textContent =
+      "Speed: " + pokemon.statsSpeed;
     document.querySelector("#dialog-image").src = pokemon.image;
 
     document.querySelector("#pokemonDialog").showModal();
