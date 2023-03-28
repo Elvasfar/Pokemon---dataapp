@@ -5,7 +5,7 @@
   "subtype": "undefined",
   "generation": 1,
   "spilversion": "FireRed",
-  "canEvolve": "true",
+  "canEvolve": true,
   "statsHP": 95,
   "statsAttack": 75,
   "statsDefence": 110,

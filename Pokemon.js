@@ -63,15 +63,15 @@ function showPokemon(pokemon) {
     document.querySelector("#dialog-footprint").textContent =
       "Footprint: " + pokemon.footprint;
     document.querySelector("#dialog-description").textContent =
-      "Description: " + pokemon.description;
+      pokemon.description;
     document.querySelector("#dialog-weaknesses").textContent =
       "Weaknesses: " + pokemon.weaknesses;
     document.querySelector("#dialog-ability").textContent =
       "Abilities: " + pokemon.ability;
     document.querySelector("#dialog-height").textContent =
-      "Height: " + pokemon.height;
+      "Height: " + pokemon.height + " cm.";
     document.querySelector("#dialog-weight").textContent =
-      "Weight: " + pokemon.weight;
+      "Weight: " + pokemon.weight + " g.";
     document.querySelector("#dialog-dexindex").textContent =
       "Dexindex: " + pokemon.dexindex;
     document.querySelector("#dialog-generation").textContent =
@@ -80,8 +80,10 @@ function showPokemon(pokemon) {
       "Spilversion: " + pokemon.spilversion;
     document.querySelector("#dialog-gender").textContent =
       "Gender: " + pokemon.gender;
-    document.querySelector("#dialog-canEvolve").textContent =
-      "Evolvement: " + pokemon.canEvolve;
+
+    let canEvovle = generateData(pokemon);
+    document.querySelector("#dialog-canEvolve").textContent = canEvovle;
+
     document.querySelector("#dialog-statsHP").textContent =
       "Health Points: " + pokemon.statsHP;
     document.querySelector("#dialog-statsAttack").textContent =
@@ -98,4 +100,15 @@ function showPokemon(pokemon) {
 
     document.querySelector("#pokemonDialog").showModal();
   }
+}
+
+function generateData(pokemon) {
+  let canEvolve = "";
+
+  if ((pokemon.canEvovle = "true")) {
+    canEvolve = `Evolutions: ${pokemon.name} can evolve.`;
+  } else {
+    canEvolve = `Evolution: ${pokemon.name} has no evolutions`;
+  }
+  return canEvolve;
 }

@@ -212,11 +212,19 @@ dialog::backdrop {
   grid-template-columns: 1fr 1fr;
 }
 
-#dialog-header {
+#dialog-name {
   align-content: center;
+  text-align: center;
 }
-dialog h4 {
+dialog h2 {
   margin-bottom: 0;
+  align-content: center;
+  text-align: center;
+}
+dialog h3 {
+  margin-bottom: 0;
+  align-content: center;
+  text-align: center;
 }
 dialog ul {
   margin: 0.5em 0 1em;
@@ -224,6 +232,19 @@ dialog ul {
 }
 dialog p {
   margin: 0.5em 0 1em;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  padding-left: 16em;
+}
+dialog li {
+  inset-block-start: 0;
+  padding-left: 16em;
+  align-content: left;
+  text-align: left;
+  font-style: normal;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 #dialog-image {
