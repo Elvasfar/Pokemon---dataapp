@@ -81,8 +81,8 @@ function showPokemon(pokemon) {
     document.querySelector("#dialog-gender").textContent =
       "Gender: " + pokemon.gender;
 
-    let canEvovle = generateData(pokemon);
-    document.querySelector("#dialog-canEvolve").textContent = canEvovle;
+    let canEvolve = generateData(pokemon);
+    document.querySelector("#dialog-canEvolve").textContent = canEvolve;
 
     document.querySelector("#dialog-statsHP").textContent =
       "Health Points: " + pokemon.statsHP;
@@ -104,11 +104,11 @@ function showPokemon(pokemon) {
 
 function generateData(pokemon) {
   let canEvolve = "";
-
-  if ((pokemon.canEvovle = "true")) {
+  if (pokemon.canEvolve === true) {
     canEvolve = `Evolutions: ${pokemon.name} can evolve.`;
-  } else {
+  } else if (pokemon.canEvolve === false) {
     canEvolve = `Evolution: ${pokemon.name} has no evolutions`;
   }
+
   return canEvolve;
 }
