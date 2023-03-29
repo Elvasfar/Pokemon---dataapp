@@ -22,20 +22,6 @@ async function getPokemon(url) {
 }
 
 function showPokemon(pokemon) {
-  /* --- Hvis type og weaknesses skal vises som symboler ----
-  
-  document.querySelector("#pokemons").insertAdjacentHTML(
-    "beforeend",
-    `
-    <article class="grid-item">
-    <img src="${pokemon.image}" alt""/>
-    <h2>${pokemon.name}</h2>
-    <h3>Category: ${pokemon.category}</h3>
-    <p>Type: <img id="typeimages" src="images/water.png" alt""/>   <img id="typeimages" src="images/psychic.png" alt""/></p> 
-    <p>Weaknesses: <img id="typeimages" src="images/ghost.png" alt""/> <img id="typeimages" src="images/dark.png" alt""/> <img id="typeimages" src="images/grass.png" alt""/> <img id="typeimages" src="images/electric.png" alt""/> <img id="typeimages" src="images/bug.png" alt""/></p>
-    </article>
-    );
-    `*/
   document.querySelector("#pokemons").insertAdjacentHTML(
     "beforeend",
     `
@@ -56,8 +42,9 @@ function showPokemon(pokemon) {
     console.log(pokemon);
 
     document.querySelector("#dialog-name").textContent = pokemon.name;
-    document.querySelector("#dialog-type").textContent =
-      "Type: " + pokemon.type;
+
+    let showType = generateSymbols(pokemon);
+    document.querySelector("#dialog-type").innerHTML = showType;
     document.querySelector("#dialog-subtype").textContent =
       "Subtype: " + pokemon.subtype;
     document.querySelector("#dialog-footprint").textContent =
@@ -111,4 +98,55 @@ function generateData(pokemon) {
   }
 
   return canEvolve;
+}
+
+function generateSymbols(pokemon) {
+  let showType = "";
+  if (pokemon.type === "Electric") {
+    showType = `Type: <img id="typeimages" src="images/electric.png" alt""/> `;
+  } else if (pokemon.type === "Fire" || pokemon.type === "fire") {
+    showType = `Type: <img id="typeimages" src="images/fire.png" alt""/> `;
+  } else if (pokemon.type === "Fire, Fighting") {
+    showType = `Type: <img id="typeimages" src="images/fire.png" alt""/><img id="typeimages" src="images/fighting.png" alt""/> `;
+  } else if (pokemon.type === "Normal" || pokemon.type === "normal") {
+    showType = `Type: <img id="typeimages" src="images/normal.png" alt""/> `;
+  } else if (pokemon.type === "Water") {
+    showType = `Type: <img id="typeimages" src="images/water.png" alt""/> `;
+  } else if (pokemon.type === "Fairy") {
+    showType = `Type: <img id="typeimages" src="images/fairy.png" alt""/> `;
+  } else if (pokemon.type === "Fighting") {
+    showType = `Type: <img id="typeimages" src="images/fighting.png" alt""/> `;
+  } else if (pokemon.type === "Bug/Flying") {
+    showType = `Type: <img id="typeimages" src="images/Bug.png" alt""/><img id="typeimages" src="images/flying.png" alt""/> `;
+  } else if (pokemon.type === "flying") {
+    showType = `Type: <img id="typeimages" src="images/flying.png" alt""/> `;
+  } else if (pokemon.type === "Grass, Psychic") {
+    showType = `Type: <img id="typeimages" src="images/grass.png" alt""/><img id="typeimages" src="images/psychic.png" alt""/> `;
+  } else if (pokemon.type === "Psychic" || pokemon.type === "Psychich") {
+    showType = `Type: <img id="typeimages" src="images/psychic.png" alt""/> `;
+  } else if (pokemon.type === "Dark") {
+    showType = `Type: <img id="typeimages" src="images/dark.png" alt""/> `;
+  } else if (pokemon.type === "Ghost, Grass") {
+    showType = `Type: <img id="typeimages" src="images/ghost.png" alt""/><img id="typeimages" src="images/grass.png" alt""/> `;
+  } else if (pokemon.type === "Ground") {
+    showType = `Type: <img id="typeimages" src="images/ground.png" alt""/> `;
+  } else if (pokemon.type === "Water + Psychic") {
+    showType = `Type: <img id="typeimages" src="images/water.png" alt""/><img id="typeimages" src="images/psychic.png" alt""/> `;
+  } else if (pokemon.type === "Ghost, Poison") {
+    showType = `Type: <img id="typeimages" src="images/ghost.png" alt""/><img id="typeimages" src="images/poison.png" alt""/> `;
+  } else if (pokemon.type === "Water, ground") {
+    showType = `Type: <img id="typeimages" src="images/water.png" alt""/><img id="typeimages" src="images/ground.png" alt""/> `;
+  } else if (pokemon.type === "Electric, flying") {
+    showType = `Type: <img id="typeimages" src="images/electric.png" alt""/><img id="typeimages" src="images/flying.png" alt""/> `;
+  } else if (pokemon.type === "Sun") {
+    showType = `Type: <img id="typeimages" src="images/sun.png" alt""/> `;
+  } else if (pokemon.type === "Grass, Poison") {
+    showType = `Type: <img id="typeimages" src="images/grass.png" alt""/><img id="typeimages" src="images/poison.png" alt""/> `;
+  } else if (pokemon.type === "water, ice") {
+    showType = `Type: <img id="typeimages" src="images/water.png" alt""/><img id="typeimages" src="images/ice.png" alt""/> `;
+  } else {
+    showType = `Type: ${pokemon.type}`;
+  }
+
+  return showType;
 }
