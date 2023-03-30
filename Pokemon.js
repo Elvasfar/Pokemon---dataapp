@@ -50,7 +50,7 @@ function showPokemon(pokemon) {
     document.querySelector("#dialog-subtype").textContent = removeFalse;
 
     let removeFalse2 = removeFalseValues2(pokemon);
-    document.querySelector("#dialog-footprint").textContent = removeFalse2;
+    document.querySelector("#dialog-footprint").src = removeFalse2;
     document.querySelector("#dialog-description").textContent =
       pokemon.description;
     document.querySelector("#dialog-weaknesses").textContent =
@@ -90,6 +90,7 @@ function showPokemon(pokemon) {
     document.querySelector("#dialog-image").src = pokemon.image;
 
     document.querySelector("#pokemonDialog").showModal();
+    document.querySelector("#pokemonDialog").scrollTop = 0;
   }
 }
 
@@ -193,7 +194,7 @@ function removeFalseValues2(pokemon) {
   ) {
     removeFalse2 = "";
   } else {
-    removeFalse2 = `Footprint: <img src="${pokemon.footprint}"/>`;
+    removeFalse2 = pokemon.footprint;
   }
   return removeFalse2;
 }

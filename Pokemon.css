@@ -206,6 +206,10 @@ dialog {
   align-content: center;
   text-align: center;
 }
+#dialog-footprint {
+  width: 50px;
+  height: 50px;
+}
 
 dialog::backdrop {
   background: rgb(172, 198, 201, 0.8);
