@@ -211,11 +211,6 @@ dialog::backdrop {
   background: rgb(172, 198, 201, 0.8);
 }
 
-.dialog-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
 #dialog-name {
   align-content: center;
   text-align: center;
@@ -241,10 +236,11 @@ dialog p {
   font-family: "Times New Roman", Times, serif;
   font-style: italic;
   padding-left: 16em;
+  text-align: left;
 }
 dialog li {
   inset-block-start: 0;
-  padding-left: 16em;
+  padding-left: 12em;
   align-content: left;
   text-align: left;
   font-style: normal;
