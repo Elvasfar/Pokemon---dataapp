@@ -49,8 +49,8 @@ function showPokemon(pokemon) {
     let removeFalse = removeFalseValues(pokemon);
     document.querySelector("#dialog-subtype").textContent = removeFalse;
 
-    document.querySelector("#dialog-footprint").textContent =
-      "Footprint: " + pokemon.footprint;
+    let removeFalse2 = removeFalseValues2(pokemon);
+    document.querySelector("#dialog-footprint").textContent = removeFalse2;
     document.querySelector("#dialog-description").textContent =
       pokemon.description;
     document.querySelector("#dialog-weaknesses").textContent =
@@ -63,12 +63,14 @@ function showPokemon(pokemon) {
       "Weight: " + pokemon.weight + " g.";
     document.querySelector("#dialog-dexindex").textContent =
       "Dexindex: " + pokemon.dexindex;
-    document.querySelector("#dialog-generation").textContent =
-      "Generation: " + pokemon.generation;
+
+    let removeFalse3 = removeFalseValues3(pokemon);
+    document.querySelector("#dialog-generation").textContent = removeFalse3;
     document.querySelector("#dialog-spilversion").textContent =
       "Spilversion: " + pokemon.spilversion;
-    document.querySelector("#dialog-gender").textContent =
-      "Gender: " + pokemon.gender;
+
+    let removeFalse4 = removeFalseValues4(pokemon);
+    document.querySelector("#dialog-gender").textContent = removeFalse4;
 
     let canEvolve = generateData(pokemon);
     document.querySelector("#dialog-canEvolve").textContent = canEvolve;
@@ -164,15 +166,71 @@ function removeFalseValues(pokemon) {
   if (
     pokemon.subtype === null ||
     pokemon.subtype === undefined ||
-    pokemon.subtybe === "" ||
-    pokemon.subtybe === "undefined" ||
-    pokemon.subtybe === "none" ||
-    pokemon.subtybe === "None" ||
-    pokemon.subtybe === "Undefined"
+    pokemon.subtype === "" ||
+    pokemon.subtype === "undefined" ||
+    pokemon.subtype === "none" ||
+    pokemon.subtype === "None" ||
+    pokemon.subtype === "Undefined" ||
+    pokemon.subtype === "N/A"
   ) {
     removeFalse = "";
   } else {
     removeFalse = "Subtype: " + pokemon.subtype;
   }
   return removeFalse;
+}
+function removeFalseValues2(pokemon) {
+  let removeFalse2 = "";
+  if (
+    pokemon.footprint === undefined ||
+    pokemon.footprint === null ||
+    pokemon.footprint === "" ||
+    pokemon.footprint === "undefined" ||
+    pokemon.footprint === "none" ||
+    pokemon.footprint === "None" ||
+    pokemon.footprint === "Undefined" ||
+    pokemon.footprint === "N/A"
+  ) {
+    removeFalse2 = "";
+  } else {
+    removeFalse2 = `Footprint: <img src="${pokemon.footprint}"/>`;
+  }
+  return removeFalse2;
+}
+function removeFalseValues3(pokemon) {
+  let removeFalse3 = "";
+  if (
+    pokemon.generation === undefined ||
+    pokemon.generation === null ||
+    pokemon.generation === "" ||
+    pokemon.generation === "undefined" ||
+    pokemon.generation === "none" ||
+    pokemon.generation === "None" ||
+    pokemon.generation === "Undefined" ||
+    pokemon.generation === "N/A"
+  ) {
+    removeFalse3 = "";
+  } else {
+    removeFalse3 = "Generation: " + pokemon.generation;
+  }
+  return removeFalse3;
+}
+function removeFalseValues4(pokemon) {
+  let removeFalse4 = "";
+  if (
+    pokemon.gender === undefined ||
+    pokemon.gender === null ||
+    pokemon.gender === "" ||
+    pokemon.gender === "undefined" ||
+    pokemon.gender === "none" ||
+    pokemon.gender === "None" ||
+    pokemon.gender === "Undefined" ||
+    pokemon.gender === "N/A" ||
+    pokemon.gender === "Unknown"
+  ) {
+    removeFalse4 = "";
+  } else {
+    removeFalse4 = "Gender: " + pokemon.gender;
+  }
+  return removeFalse4;
 }
