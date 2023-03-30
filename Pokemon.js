@@ -45,8 +45,10 @@ function showPokemon(pokemon) {
 
     let showType = generateSymbols(pokemon);
     document.querySelector("#dialog-type").innerHTML = showType;
-    document.querySelector("#dialog-subtype").textContent =
-      "Subtype: " + pokemon.subtype;
+
+    let removeFalse = removeFalseValues(pokemon);
+    document.querySelector("#dialog-subtype").textContent = removeFalse;
+
     document.querySelector("#dialog-footprint").textContent =
       "Footprint: " + pokemon.footprint;
     document.querySelector("#dialog-description").textContent =
@@ -149,4 +151,28 @@ function generateSymbols(pokemon) {
   }
 
   return showType;
+}
+
+/* footprint
+subtype
+gender 
+generation
+*/
+
+function removeFalseValues(pokemon) {
+  let removeFalse = "";
+  if (
+    pokemon.subtype === null ||
+    pokemon.subtype === undefined ||
+    pokemon.subtybe === "" ||
+    pokemon.subtybe === "undefined" ||
+    pokemon.subtybe === "none" ||
+    pokemon.subtybe === "None" ||
+    pokemon.subtybe === "Undefined"
+  ) {
+    removeFalse = "";
+  } else {
+    removeFalse = "Subtype: " + pokemon.subtype;
+  }
+  return removeFalse;
 }
